@@ -1,6 +1,6 @@
 {
-  "name": "dashboard",
-  "version": "1.0.2",
+  "name": "customer",
+  "version": "1.0.0",
   "description": "",
   "keywords": [
     "pilet"
@@ -9,9 +9,9 @@
     "@types/node": "latest",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "app-shell": "file:../app-shell/dist/emulator/app-shell-1.0.0.tgz",
+    "app-shell": "file:..\\app-shell\\dist\\emulator\\app-shell-1.0.0.tgz",
     "piral-cli": "1.4.2",
-    "piral-cli-webpack5": "1.4.2",
+    "piral-cli-webpack5": "1.4.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router": "5.3.4",
@@ -22,25 +22,24 @@
   "scripts": {
     "start": "pilet debug",
     "build": "pilet build",
-    "upgrade": "pilet upgrade",
-    "postinstall": "pilet declaration"
+    "upgrade": "pilet upgrade"
   },
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
   "importmap": {
+    "imports": {},
     "inherit": [
       "app-shell"
-    ],
-    "imports": {}
+    ]
   },
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.15.0",
-    "@mui/material": "^5.15.0",
-    "recharts": "^2.10.3"
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "bootstrap": "^5.2.0",
+    "react-bootstrap": "^2.4.0"
   },
   "source": "src/index.tsx"
 }
