@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Stack } from "@mui/material";
 import { Product, ProductActionButton, ProductActionWrapper, ProductAddToCart, ProductFavButton, ProductImage } from "../../public/styles/products";
 import ProductMeta from "./ProductMeta";

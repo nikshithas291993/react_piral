@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Box, Button, IconButton, styled } from "@mui/material";
 import { Colors } from "../theme";
 import { slideInBottom, slideInRight } from "../../animation";

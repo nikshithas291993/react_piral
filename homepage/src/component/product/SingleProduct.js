@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Stack } from "@mui/material";
 import { Product, ProductActionButton, ProductActionWrapper, ProductAddToCart, ProductFavButton, ProductImage } from "../../public/styles/products";
 import ProductMeta from "./ProductMeta";
@@ -9,7 +10,7 @@ export default function SingleProducts({ product, matches }){
     return(
         <>
         <Product>
-        <a href={`/product/${product.productId}`}><ProductImage src={ product.productImage} /></a>
+        <a href={`/pdp/${product.productId}`}><ProductImage src={ product.productImage} /></a>
                 <ProductMeta product={product} matches={ matches}/>
                 <ProductActionWrapper>
                     <Stack direction="row">

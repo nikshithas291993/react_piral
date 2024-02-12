@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { Colors } from "../theme";
 import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
