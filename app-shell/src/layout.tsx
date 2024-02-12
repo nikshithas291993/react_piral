@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ComponentsState, ErrorComponentsState, Menu, Notifications, SwitchErrorInfo, MenuItemProps } from 'piral';
 import { Link } from 'react-router-dom';
-
+import  Header from './component/Header'
 const MenuItem: React.FC<MenuItemProps> = ({ children }) => <li className="nav-item">{children}</li>;
 
 export const errors: Partial<ErrorComponentsState> = {
@@ -37,29 +37,7 @@ export const layout: Partial<ComponentsState> = {
   MenuContainer: ({ children }) => {
     const [collapsed, setCollapsed] = React.useState(true);
     return (
-      <header className="-app-shell">
-        <nav className="navbar navbar-light navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3">
-          <div className="container">
-            <Link className="navbar-brand" to="/">
-              Simple E-Commerce
-            </Link>
-            <button
-              aria-label="Toggle navigation"
-              type="button"
-              onClick={() => setCollapsed(!collapsed)}
-              className="navbar-toggler mr-2">
-              <span className="navbar-toggler-icon" />
-            </button>
-            <div
-              className={`collapse navbar-collapse d-sm-inline-flex flex-sm-row-reverse ${collapsed ? '' : 'show'}`}
-              aria-expanded={!collapsed}>
-              <ul className="navbar-nav flex-grow">
-                {children}
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
+      <Header/>
     );
   },
   MenuItem,

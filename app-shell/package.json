@@ -6,7 +6,10 @@
     "piral"
   ],
   "dependencies": {
-    "@mui/material": "^5.15.1",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.9",
+    "@mui/material": "^5.15.9",
     "axios": "^1.6.2",
     "piral": "1.4.2",
     "piral-base": "1.4.2",

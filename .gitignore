@@ -35,6 +35,10 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+app-shell/node_modules/
+customer/node_modules/
+dashboard/node_modules/
+user/node_modules/
 
 # TypeScript v1 declaration files
 typings/
