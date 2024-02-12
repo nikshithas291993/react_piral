@@ -1,8 +1,11 @@
+// Import necessary components and modules
 import * as React from 'react';
 import { ComponentsState, ErrorComponentsState, Menu, Notifications, SwitchErrorInfo, MenuItemProps } from 'piral';
 import { Link } from 'react-router-dom';
-import  Header from './component/Header'
-const MenuItem: React.FC<MenuItemProps> = ({ children }) => <li className="nav-item">{children}</li>;
+import Header from './component/Header';
+import Footer from './component/Footer';
+
+const MenuItem: React.FC<MenuItemProps> = ({ children }) => <><div><br/></div></>
 
 export const errors: Partial<ErrorComponentsState> = {
   not_found: () => (
@@ -16,7 +19,7 @@ export const errors: Partial<ErrorComponentsState> = {
 };
 
 export const layout: Partial<ComponentsState> = {
-  ErrorInfo: props => (
+  ErrorInfo: (props) => (
     <div>
       <h1>Error</h1>
       <SwitchErrorInfo {...props} />
@@ -24,7 +27,7 @@ export const layout: Partial<ComponentsState> = {
   ),
   DashboardContainer: ({ children }) => (
     <div className="main-container -app-shell">
-        {children}
+      {children}
     </div>
   ),
   Layout: ({ children }) => (
@@ -32,12 +35,17 @@ export const layout: Partial<ComponentsState> = {
       <Notifications />
       <Menu type="general" />
       <div className="container">{children}</div>
+      <Footer/>
     </div>
   ),
   MenuContainer: ({ children }) => {
     const [collapsed, setCollapsed] = React.useState(true);
     return (
-      <Header/>
+      <>
+        <Header />
+        {children} {/* Place the main content under the Header component */}
+        
+      </>
     );
   },
   MenuItem,
